@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { salveLogin } from '../redux/actions';
+import { UserState } from '../types';
 
 const loginData = {
   email: '',
@@ -9,8 +10,7 @@ const loginData = {
 };
 
 function Login() {
-  // const [validate, setValidate] = useState(true);
-  const [login, setLogin] = useState(loginData);
+  const [login, setLogin] = useState<UserState>(loginData);
 
   const dispatch = useDispatch();
 
@@ -32,33 +32,36 @@ function Login() {
   }
 
   return (
-    <form onSubmit={ handleSubmit }>
-      <label>
-        E-mail:
-        {' '}
-        <input
-          data-testid="email-input"
-          type="email"
-          name="email"
-          value={ email }
-          required
-          onChange={ handleChange }
-        />
-      </label>
-      <label>
-        Senha:
-        {' '}
-        <input
-          data-testid="password-input"
-          name="password"
-          value={ password }
-          type="password"
-          required
-          onChange={ handleChange }
-        />
-      </label>
-      <button disabled={ !(password.length >= 6 && /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i.test(email)) }>Entrar</button>
-    </form>
+    <>
+      <h1>TrybeWallet</h1>
+      <form onSubmit={ handleSubmit }>
+        <label>
+          E-mail:
+          {' '}
+          <input
+            data-testid="email-input"
+            type="email"
+            name="email"
+            value={ email }
+            required
+            onChange={ handleChange }
+          />
+        </label>
+        <label>
+          Senha:
+          {' '}
+          <input
+            data-testid="password-input"
+            name="password"
+            value={ password }
+            type="password"
+            required
+            onChange={ handleChange }
+          />
+        </label>
+        <button disabled={ !(password.length >= 6 && /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i.test(email)) }>Entrar</button>
+      </form>
+    </>
   );
 }
 
