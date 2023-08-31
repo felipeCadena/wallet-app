@@ -20,6 +20,15 @@ export type UserState = {
   password: string;
 };
 
+export type RenderExpenses = {
+  id: number,
+  value: number;
+  currency: number;
+  method: string;
+  tag: string;
+  description: string;
+};
+
 export type WalletState = {
   currencies: string[],
   expenses: [{

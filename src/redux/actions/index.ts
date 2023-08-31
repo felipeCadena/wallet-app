@@ -3,6 +3,7 @@ import { Dispatch, UserState } from '../../types';
 export const LOGIN_DATA = 'LOGIN_DATA';
 export const WALLET_DATA = 'WALLET_DATA';
 export const EXPENSES_DATA = 'EXPENSES_DATA';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const salveLogin = (login: UserState) => ({
   type: 'LOGIN_DATA',
@@ -17,6 +18,11 @@ export const salveCurrencies = (currencies: string[]) => ({
 export const salveExpenses = (data: object, expenses: object) => ({
   type: 'EXPENSES_DATA',
   payload: { expenses, data },
+});
+
+export const deleteExpenses = (id: number) => ({
+  type: 'DELETE_EXPENSE',
+  payload: id,
 });
 
 export function fetchCurrencies() {
