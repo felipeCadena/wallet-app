@@ -31,6 +31,7 @@ export type WalletState = {
     description: string;
     exchangeRates: [{
       ask: number;
+      name: string;
     }];
   }],
   editor: boolean;
