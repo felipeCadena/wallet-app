@@ -35,7 +35,7 @@ O projeto estará disponível na porta 3001 ``` localhost:3001 ```
 
 - 📋 Requisitos
 
-1- Crie uma página inicial de login
+1. Crie uma página inicial de login
 
 2. Crie um header para a página de carteira
 
