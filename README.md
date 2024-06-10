@@ -19,15 +19,9 @@
 
 1 - Clone o repositório
 
-Utilize o comando: 
-```
-git clone [git@github.com](mailto:git@github.com):felipeCadena/wallet-app.git
-```
+Utilize o comando: ``` git clone [git@github.com](mailto:git@github.com):felipeCadena/wallet-app.git ```
 
-Faça uma nova Branch a partir da main :
-```
-git checkout -b nome-da-sua-branch
-```
+Faça uma nova Branch a partir da main: ``` git checkout -b nome-da-sua-branch ```
 
 2 - Instale as dependências do projeto
 
